@@ -3,16 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30A1C703275D232000E4BE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C702275D232000E4BE35 /* AppDelegate.swift */; };
 		30A1C705275D232000E4BE35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C704275D232000E4BE35 /* SceneDelegate.swift */; };
-		30A1C707275D232000E4BE35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C706275D232000E4BE35 /* ViewController.swift */; };
 		30A1C70A275D232000E4BE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A1C708275D232000E4BE35 /* Main.storyboard */; };
 		30A1C70C275D232800E4BE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A1C70B275D232800E4BE35 /* Assets.xcassets */; };
 		30A1C70F275D232800E4BE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A1C70D275D232800E4BE35 /* LaunchScreen.storyboard */; };
+		30A1C719275DC45D00E4BE35 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C718275DC45D00E4BE35 /* MainTabBarController.swift */; };
+		30A1C71D275DC60600E4BE35 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C71C275DC60600E4BE35 /* UserViewController.swift */; };
+		30A1C71F275DC61400E4BE35 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C71E275DC61400E4BE35 /* MineViewController.swift */; };
+		30A1C723275DC6B100E4BE35 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C722275DC6B100E4BE35 /* BaseNavigationController.swift */; };
+		30A1C726275DC78200E4BE35 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C725275DC78200E4BE35 /* Macros.swift */; };
+		30A1C728275E666400E4BE35 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C727275E666300E4BE35 /* BaseViewController.swift */; };
+		30A1C72A275E775C00E4BE35 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C729275E775C00E4BE35 /* BaseView.swift */; };
+		30A1C72F275E7F2000E4BE35 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C72E275E7F2000E4BE35 /* PersonViewController.swift */; };
+		30A1C738275E804E00E4BE35 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C737275E804E00E4BE35 /* UserView.swift */; };
+		30A1C73A275E808800E4BE35 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C739275E808800E4BE35 /* UserViewModel.swift */; };
+		30A1C73C275E80BE00E4BE35 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C73B275E80BE00E4BE35 /* UserModel.swift */; };
+		30A1C73E275E80E200E4BE35 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C73D275E80E200E4BE35 /* MineView.swift */; };
+		30A1C740275E80FE00E4BE35 /* MineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C73F275E80FE00E4BE35 /* MineViewModel.swift */; };
+		30A1C742275E811500E4BE35 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C741275E811500E4BE35 /* MineModel.swift */; };
+		30A1C744275E813200E4BE35 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C743275E813200E4BE35 /* PersonView.swift */; };
+		30A1C746275E814600E4BE35 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C745275E814600E4BE35 /* PersonViewModel.swift */; };
+		30A1C748275E815700E4BE35 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C747275E815700E4BE35 /* PersonModel.swift */; };
 		AA4DA53A8467665BC65CA48F /* Pods_githubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6AE34BAC76CD29BFF111B9 /* Pods_githubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +36,27 @@
 		30A1C6FF275D232000E4BE35 /* githubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A1C702275D232000E4BE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A1C704275D232000E4BE35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30A1C706275D232000E4BE35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30A1C709275D232000E4BE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30A1C70B275D232800E4BE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A1C70E275D232800E4BE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30A1C710275D232800E4BE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30A1C718275DC45D00E4BE35 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		30A1C71C275DC60600E4BE35 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		30A1C71E275DC61400E4BE35 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		30A1C722275DC6B100E4BE35 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		30A1C725275DC78200E4BE35 /* Macros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
+		30A1C727275E666300E4BE35 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		30A1C729275E775C00E4BE35 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		30A1C72E275E7F2000E4BE35 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		30A1C737275E804E00E4BE35 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		30A1C739275E808800E4BE35 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		30A1C73B275E80BE00E4BE35 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		30A1C73D275E80E200E4BE35 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
+		30A1C73F275E80FE00E4BE35 /* MineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewModel.swift; sourceTree = "<group>"; };
+		30A1C741275E811500E4BE35 /* MineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
+		30A1C743275E813200E4BE35 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		30A1C745275E814600E4BE35 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		30A1C747275E815700E4BE35 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		62F096E0EF3FD36E16805219 /* Pods-githubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubUsers.debug.xcconfig"; path = "Target Support Files/Pods-githubUsers/Pods-githubUsers.debug.xcconfig"; sourceTree = "<group>"; };
 		DB389E083AE0AC3025BB9D41 /* Pods-githubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubUsers.release.xcconfig"; path = "Target Support Files/Pods-githubUsers/Pods-githubUsers.release.xcconfig"; sourceTree = "<group>"; };
 		FE6AE34BAC76CD29BFF111B9 /* Pods_githubUsers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubUsers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,15 +95,167 @@
 		30A1C701275D232000E4BE35 /* githubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				30A1C720275DC67400E4BE35 /* Global */,
+				30A1C716275DC42500E4BE35 /* Scenes */,
 				30A1C702275D232000E4BE35 /* AppDelegate.swift */,
 				30A1C704275D232000E4BE35 /* SceneDelegate.swift */,
-				30A1C706275D232000E4BE35 /* ViewController.swift */,
 				30A1C708275D232000E4BE35 /* Main.storyboard */,
 				30A1C70B275D232800E4BE35 /* Assets.xcassets */,
 				30A1C70D275D232800E4BE35 /* LaunchScreen.storyboard */,
 				30A1C710275D232800E4BE35 /* Info.plist */,
 			);
 			path = githubUsers;
+			sourceTree = "<group>";
+		};
+		30A1C716275DC42500E4BE35 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C72D275E7EFF00E4BE35 /* Person */,
+				30A1C71B275DC5ED00E4BE35 /* Mine */,
+				30A1C71A275DC5E600E4BE35 /* User */,
+				30A1C717275DC42C00E4BE35 /* Root */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		30A1C717275DC42C00E4BE35 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C718275DC45D00E4BE35 /* MainTabBarController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		30A1C71A275DC5E600E4BE35 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C732275E7F4300E4BE35 /* Model */,
+				30A1C72C275E7EC100E4BE35 /* ViewModel */,
+				30A1C72B275E7EB000E4BE35 /* View */,
+				30A1C71C275DC60600E4BE35 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		30A1C71B275DC5ED00E4BE35 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C733275E7F4900E4BE35 /* Model */,
+				30A1C731275E7F3700E4BE35 /* ViewModel */,
+				30A1C730275E7F2E00E4BE35 /* View */,
+				30A1C71E275DC61400E4BE35 /* MineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		30A1C720275DC67400E4BE35 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C724275DC76E00E4BE35 /* Definition */,
+				30A1C721275DC68F00E4BE35 /* View */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		30A1C721275DC68F00E4BE35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C722275DC6B100E4BE35 /* BaseNavigationController.swift */,
+				30A1C727275E666300E4BE35 /* BaseViewController.swift */,
+				30A1C729275E775C00E4BE35 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30A1C724275DC76E00E4BE35 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C725275DC78200E4BE35 /* Macros.swift */,
+			);
+			path = Definition;
+			sourceTree = "<group>";
+		};
+		30A1C72B275E7EB000E4BE35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C737275E804E00E4BE35 /* UserView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30A1C72C275E7EC100E4BE35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C739275E808800E4BE35 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30A1C72D275E7EFF00E4BE35 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C736275E7F5D00E4BE35 /* Model */,
+				30A1C735275E7F5500E4BE35 /* ViewModel */,
+				30A1C734275E7F4E00E4BE35 /* View */,
+				30A1C72E275E7F2000E4BE35 /* PersonViewController.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		30A1C730275E7F2E00E4BE35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C73D275E80E200E4BE35 /* MineView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30A1C731275E7F3700E4BE35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C73F275E80FE00E4BE35 /* MineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30A1C732275E7F4300E4BE35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C73B275E80BE00E4BE35 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30A1C733275E7F4900E4BE35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C741275E811500E4BE35 /* MineModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30A1C734275E7F4E00E4BE35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C743275E813200E4BE35 /* PersonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30A1C735275E7F5500E4BE35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C745275E814600E4BE35 /* PersonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30A1C736275E7F5D00E4BE35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C747275E815700E4BE35 /* PersonModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		88596339A7BE276156690CE2 /* Frameworks */ = {
@@ -88,7 +272,6 @@
 				62F096E0EF3FD36E16805219 /* Pods-githubUsers.debug.xcconfig */,
 				DB389E083AE0AC3025BB9D41 /* Pods-githubUsers.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,9 +389,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30A1C707275D232000E4BE35 /* ViewController.swift in Sources */,
+				30A1C738275E804E00E4BE35 /* UserView.swift in Sources */,
+				30A1C73A275E808800E4BE35 /* UserViewModel.swift in Sources */,
 				30A1C703275D232000E4BE35 /* AppDelegate.swift in Sources */,
+				30A1C746275E814600E4BE35 /* PersonViewModel.swift in Sources */,
+				30A1C740275E80FE00E4BE35 /* MineViewModel.swift in Sources */,
+				30A1C742275E811500E4BE35 /* MineModel.swift in Sources */,
+				30A1C73E275E80E200E4BE35 /* MineView.swift in Sources */,
+				30A1C744275E813200E4BE35 /* PersonView.swift in Sources */,
+				30A1C71D275DC60600E4BE35 /* UserViewController.swift in Sources */,
+				30A1C723275DC6B100E4BE35 /* BaseNavigationController.swift in Sources */,
+				30A1C73C275E80BE00E4BE35 /* UserModel.swift in Sources */,
 				30A1C705275D232000E4BE35 /* SceneDelegate.swift in Sources */,
+				30A1C726275DC78200E4BE35 /* Macros.swift in Sources */,
+				30A1C72F275E7F2000E4BE35 /* PersonViewController.swift in Sources */,
+				30A1C728275E666400E4BE35 /* BaseViewController.swift in Sources */,
+				30A1C72A275E775C00E4BE35 /* BaseView.swift in Sources */,
+				30A1C748275E815700E4BE35 /* PersonModel.swift in Sources */,
+				30A1C719275DC45D00E4BE35 /* MainTabBarController.swift in Sources */,
+				30A1C71F275DC61400E4BE35 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
