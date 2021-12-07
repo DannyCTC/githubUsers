@@ -8,22 +8,28 @@
 import UIKit
 
 class MineViewController: BaseViewController {
+    var viewModel = MineViewModel()
+    var mineView: MineView!
+
+    override func loadView() {
+        super.loadView()
+        mineView = MineView.init(owner: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        binding()
+        viewModel.startApi()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func binding() {
+        viewModel.data
+            .asObservable()
+            .subscribe(onNext: { [weak self] data in
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    self?.mineView.setupContents(mine: data)
+                }
+            }).disposed(by: disposeBag)
     }
-    */
-
 }
