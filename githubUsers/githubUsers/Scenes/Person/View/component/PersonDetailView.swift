@@ -37,7 +37,7 @@ class PersonDetailView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupText(text: String) {
+    func setupText(text: String?) {
         titleLab.text = text
     }
 

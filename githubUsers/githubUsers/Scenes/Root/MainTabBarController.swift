@@ -23,18 +23,18 @@ enum MainTabBarItem {
     var unSelectedImage: UIImage? {
         switch self {
         case .home:
-            return UIImage(named: "tab_user_selected")
+            return UIImage(named: "tab_user_unselected")
         case .mine:
-            return UIImage(named: "tab_mine_selected")
+            return UIImage(named: "tab_mine_unselected")
         }
     }
 
     var selectedImage: UIImage? {
         switch self {
         case .home:
-            return UIImage(named: "tab_user_unselected")
+            return UIImage(named: "tab_user_selected")
         case .mine:
-            return UIImage(named: "tab_mine_unselected")
+            return UIImage(named: "tab_mine_selected")
         }
     }
 
@@ -58,6 +58,7 @@ class MainTabBarController: UITabBarController {
         initStyle()
         initVC()
         showViewControllers()
+        setupSwipeGesture()
     }
 
     deinit {
@@ -88,11 +89,38 @@ class MainTabBarController: UITabBarController {
         viewControllers = [homeVC, minVC]
     }
 
+    func setupSwipeGesture() -> Void {
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+        leftSwipe.numberOfTouchesRequired = 1
+        leftSwipe.direction = .left
+        self.view.addGestureRecognizer(leftSwipe)
+
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+        rightSwipe.numberOfTouchesRequired = 1
+        rightSwipe.direction = .right
+        self.view.addGestureRecognizer(rightSwipe)
+    }
+
+    @objc private func swipeGesture(swipe: UISwipeGestureRecognizer) {
+        switch swipe.direction {
+        case .right:
+            if selectedIndex > 0 {
+                self.selectedIndex = self.selectedIndex - 1
+            }
+        case .left:
+            if let vcs = self.viewControllers, selectedIndex < vcs.count {
+                self.selectedIndex = self.selectedIndex + 1
+            }
+        default:
+            break
+        }
+    }
+
     private func childVC(_ childVC: UIViewController,
                          _ tabType: MainTabBarItem) -> BaseNavigationController{
 
         // 设置UITabBarItem的文字属性
-        childVC.tabBarItem = UITabBarItem.init(title: tabType.title, image: tabType.selectedImage?.withRenderingMode(.alwaysOriginal), selectedImage:  tabType.unSelectedImage?.withRenderingMode(.alwaysOriginal))
+        childVC.tabBarItem = UITabBarItem.init(title: tabType.title, image: tabType.unSelectedImage?.withRenderingMode(.alwaysOriginal), selectedImage:  tabType.selectedImage?.withRenderingMode(.alwaysOriginal))
 
         // tabBar icon text 位置
         var tabBarTextOffset: CGFloat = -5

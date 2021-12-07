@@ -10,9 +10,9 @@ import Foundation
 struct PersonModel: Codable {
     let name: String
     let avatarURL: String
-    let fullName: String
-    let blog: String
-    let location: String
+    let fullName: String?
+    let blog: String?
+    let location: String?
 
     enum CodingKeys: String, CodingKey {
         case name = "login"

@@ -13,8 +13,8 @@ class PersonView: BaseView {
         if let url = URL(string: person.avatarURL) {
             titleIcon.setKFImage(with: url)
         }
-        titleLab.text = person.name
-        nameView.setupText(text: person.fullName)
+        titleLab.text = person.fullName
+        nameView.setupText(text: person.name)
         locationView.setupText(text: person.location)
         blogView.setupText(text: person.blog)
     }
