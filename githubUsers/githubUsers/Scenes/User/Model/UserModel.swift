@@ -7,6 +7,14 @@
 
 import Foundation
 
-struct UserModel {
-    
+struct UserModel: Codable {
+    let name: String
+    let avatarURL: String
+    let url: String
+
+    enum CodingKeys: String, CodingKey {
+        case name = "login"
+        case avatarURL = "avatar_url"
+        case url
+    }
 }

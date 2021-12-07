@@ -9,21 +9,28 @@ import UIKit
 
 class UserViewController: BaseViewController {
 
+    var viewModel = UserViewModel()
+    var userView: UserView!
+
+    override func loadView() {
+        super.loadView()
+        userView = UserView.init(owner: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        // Do any additional setup after loading the view.
+        binding()
+        viewModel.startApi()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func binding() {
+        viewModel.listData
+            .asObservable()
+            .subscribe(onNext: { [weak self] data in
+                DispatchQueue.main.async {
+                    self?.userView.setupContents(users: data)
+                }
+            }).disposed(by: disposeBag)
     }
-    */
 
 }

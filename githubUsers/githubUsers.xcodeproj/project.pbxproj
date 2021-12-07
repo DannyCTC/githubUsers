@@ -29,6 +29,10 @@
 		30A1C744275E813200E4BE35 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C743275E813200E4BE35 /* PersonView.swift */; };
 		30A1C746275E814600E4BE35 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C745275E814600E4BE35 /* PersonViewModel.swift */; };
 		30A1C748275E815700E4BE35 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C747275E815700E4BE35 /* PersonModel.swift */; };
+		30A1C74B275E842000E4BE35 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C74A275E842000E4BE35 /* UserTableViewCell.swift */; };
+		30A1C74E275EFE4B00E4BE35 /* UIImageView++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C74D275EFE4B00E4BE35 /* UIImageView++Extension.swift */; };
+		30A1C751275F219D00E4BE35 /* GitHubNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C750275F219D00E4BE35 /* GitHubNet.swift */; };
+		30A1C753275F225900E4BE35 /* GitHubNetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1C752275F225900E4BE35 /* GitHubNetError.swift */; };
 		AA4DA53A8467665BC65CA48F /* Pods_githubUsers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6AE34BAC76CD29BFF111B9 /* Pods_githubUsers.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,10 @@
 		30A1C743275E813200E4BE35 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		30A1C745275E814600E4BE35 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		30A1C747275E815700E4BE35 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		30A1C74A275E842000E4BE35 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		30A1C74D275EFE4B00E4BE35 /* UIImageView++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView++Extension.swift"; sourceTree = "<group>"; };
+		30A1C750275F219D00E4BE35 /* GitHubNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubNet.swift; sourceTree = "<group>"; };
+		30A1C752275F225900E4BE35 /* GitHubNetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubNetError.swift; sourceTree = "<group>"; };
 		62F096E0EF3FD36E16805219 /* Pods-githubUsers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubUsers.debug.xcconfig"; path = "Target Support Files/Pods-githubUsers/Pods-githubUsers.debug.xcconfig"; sourceTree = "<group>"; };
 		DB389E083AE0AC3025BB9D41 /* Pods-githubUsers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubUsers.release.xcconfig"; path = "Target Support Files/Pods-githubUsers/Pods-githubUsers.release.xcconfig"; sourceTree = "<group>"; };
 		FE6AE34BAC76CD29BFF111B9 /* Pods_githubUsers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubUsers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +103,7 @@
 		30A1C701275D232000E4BE35 /* githubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				30A1C74F275F218400E4BE35 /* Net */,
 				30A1C720275DC67400E4BE35 /* Global */,
 				30A1C716275DC42500E4BE35 /* Scenes */,
 				30A1C702275D232000E4BE35 /* AppDelegate.swift */,
@@ -151,6 +160,7 @@
 		30A1C720275DC67400E4BE35 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				30A1C74C275EFE3200E4BE35 /* Extension */,
 				30A1C724275DC76E00E4BE35 /* Definition */,
 				30A1C721275DC68F00E4BE35 /* View */,
 			);
@@ -178,6 +188,7 @@
 		30A1C72B275E7EB000E4BE35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30A1C749275E83EF00E4BE35 /* component */,
 				30A1C737275E804E00E4BE35 /* UserView.swift */,
 			);
 			path = View;
@@ -256,6 +267,31 @@
 				30A1C747275E815700E4BE35 /* PersonModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		30A1C749275E83EF00E4BE35 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C74A275E842000E4BE35 /* UserTableViewCell.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		30A1C74C275EFE3200E4BE35 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C74D275EFE4B00E4BE35 /* UIImageView++Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		30A1C74F275F218400E4BE35 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				30A1C750275F219D00E4BE35 /* GitHubNet.swift */,
+				30A1C752275F225900E4BE35 /* GitHubNetError.swift */,
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 		88596339A7BE276156690CE2 /* Frameworks */ = {
@@ -390,19 +426,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				30A1C738275E804E00E4BE35 /* UserView.swift in Sources */,
+				30A1C74E275EFE4B00E4BE35 /* UIImageView++Extension.swift in Sources */,
 				30A1C73A275E808800E4BE35 /* UserViewModel.swift in Sources */,
 				30A1C703275D232000E4BE35 /* AppDelegate.swift in Sources */,
 				30A1C746275E814600E4BE35 /* PersonViewModel.swift in Sources */,
+				30A1C74B275E842000E4BE35 /* UserTableViewCell.swift in Sources */,
 				30A1C740275E80FE00E4BE35 /* MineViewModel.swift in Sources */,
 				30A1C742275E811500E4BE35 /* MineModel.swift in Sources */,
 				30A1C73E275E80E200E4BE35 /* MineView.swift in Sources */,
 				30A1C744275E813200E4BE35 /* PersonView.swift in Sources */,
+				30A1C751275F219D00E4BE35 /* GitHubNet.swift in Sources */,
 				30A1C71D275DC60600E4BE35 /* UserViewController.swift in Sources */,
 				30A1C723275DC6B100E4BE35 /* BaseNavigationController.swift in Sources */,
 				30A1C73C275E80BE00E4BE35 /* UserModel.swift in Sources */,
 				30A1C705275D232000E4BE35 /* SceneDelegate.swift in Sources */,
 				30A1C726275DC78200E4BE35 /* Macros.swift in Sources */,
 				30A1C72F275E7F2000E4BE35 /* PersonViewController.swift in Sources */,
+				30A1C753275F225900E4BE35 /* GitHubNetError.swift in Sources */,
 				30A1C728275E666400E4BE35 /* BaseViewController.swift in Sources */,
 				30A1C72A275E775C00E4BE35 /* BaseView.swift in Sources */,
 				30A1C748275E815700E4BE35 /* PersonModel.swift in Sources */,

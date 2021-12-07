@@ -19,12 +19,23 @@ class BaseView: UIView {
     var disposeBag = DisposeBag()
 
     init() {
-        var rect = UIScreen.main.bounds
-        rect.size.height -= (kSafeAreaTopHeight+kSafeTabBarHeight)
-        super.init(frame: rect)
+        super.init(frame: .zero)
+    }
+
+    init(owner: AnyObject?, frame: CGRect? = nil) {
+        if let f = frame {
+            super.init(frame: f)
+        } else {
+            var rect = UIScreen.main.bounds
+            rect.size.height -= (kSafeAreaTopHeight+kSafeTabBarHeight)
+            super.init(frame: rect)
+        }
         backgroundColor = .white
+        self.owner = owner
         initSetupSubviews()
         makeSubviewConstraints()
+        setupOutlets(owner: owner)
+        setup()
 
         for subview in subviews {
             subview.layoutSubviews()
@@ -40,12 +51,24 @@ class BaseView: UIView {
     }
 
     /// 初始化視圖參數
-    func initSetupSubviews() -> Void{
+    func initSetupSubviews() -> Void {
 
     }
 
     /// 設置子視圖約束
-    func makeSubviewConstraints() -> Void{
+    func makeSubviewConstraints() -> Void {
+
+    }
+
+    /// 設置視圖關聯關係
+    func setupOutlets(owner: AnyObject?){
+        if owner != nil && owner!.isKind(of: UIViewController.classForCoder()){
+            (owner as! UIViewController).view = self
+        }
+    }
+
+    /// 初始化設置
+    func setup() -> Void {
 
     }
 
