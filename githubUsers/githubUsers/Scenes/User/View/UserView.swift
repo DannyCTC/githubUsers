@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class UserView: BaseView {
+    var userClick: ((_ user: UserModel) -> ())?
     private var users: [UserModel] = []
 
     override func setup() {
@@ -53,7 +54,8 @@ class UserView: BaseView {
 
 extension UserView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let data = users[indexPath.row]
+        userClick?(data)
     }
 }
 
